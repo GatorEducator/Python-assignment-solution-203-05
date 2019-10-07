@@ -1,0 +1,34 @@
+---
+name: cmpsc-203-spring-2019-practical5
+break: true
+indent: 4
+---
+# --> check the source code for various characteristics
+# note that without an "--exact" the check is an "at least"
+termfrequency:
+    compute_tf_pipeline.py:
+        ConfirmFileExists
+        MatchFileFragment --fragment "if __name__ ==" --count 1
+        MatchFileFragment --fragment "TODO" --count 0
+tests:
+    test_compute_tf_pipeline.py:
+        ConfirmFileExists
+        MatchFileFragment --fragment "from termfrequency import compute_tf_pipeline" --count 1
+        MatchFileFragment --fragment "test_" --count 5
+        MatchFileFragment --fragment "TODO" --count 0
+# --> check the technical writing
+# mdl is a Markdown linting tool
+# proselint checks writing for common mistakes
+writing/reflection.md:
+    mdl
+    proselint
+    MatchFileFragment --fragment "```" --count 2
+    CountFileParagraphs --count 5 --exact
+    CountFileWords --count 100
+# --> check the number of commits beyond a threshold
+CountCommits --count 21
+# --> check that the program executes and produces 4 lines of output
+ExecuteCommand --command "pipenv run python3 termfrequency/compute_tf_pipeline.py inputs/input.txt"
+CountCommandOutput --command "pipenv run python3 termfrequency/compute_tf_pipeline.py inputs/input.txt" --count 8 --exact
+# --> check that the test suite executes and does not fail
+ExecuteCommand --command "pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov"
