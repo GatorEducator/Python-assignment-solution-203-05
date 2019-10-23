@@ -1,10 +1,10 @@
 <!---
 
-GatorGrader example that contains a solution to a Java programming project:
-https://github.com/GatorEducator/python-assignment-solution-100-01
+GatorGrader example that contains a solution to a Python programming project:
+https://github.com/GatorEducator/python-assignment-solution-203-05
 
 This is the companion "starter" repository (i.e., the repository given to students):
-https://github.com/GatorEducator/python-assignment-starter-100-01
+https://github.com/GatorEducator/python-assignment-starter-203-05
 
 Learn more about GatorGrader and its supported checks by visiting this web site:
 https://github.com/GatorEducator/gatorgrader
@@ -330,10 +330,10 @@ We developed this assignment to work with the following software and versions:
 ## Reporting Problems
 
 If you have found a problem with this assignment's provided source code or
-documentation, then you can go to the [Java Assignment Solution
-100-01](https://github.com/GatorEducator/java-assignment-solution-100-01)
+documentation, then you can go to the [Python Assignment Solution
+100-01](https://github.com/GatorEducator/python-assignment-solution-203-05)
 repository and [raise an
-issue](https://github.com/GatorEducator/java-assignment-solution-100-01/issues).
+issue](https://github.com/GatorEducator/python-assignment-solution-203-05/issues).
 If you have found a problem with the [GatorGrader
 tool](https://github.com/GatorEducator/gatorgrader) and the way that it checks
 your assignment, then you can also [raise an
@@ -363,7 +363,7 @@ grading](http://rtalbert.org/return-to-specs-grading-calculus/), the grade that
 a student receives on this assignment will have the following components:
 
 - **Percentage of Correct GatorGrader Checks**: Students are encouraged to
-  repeatedly try to implement a Java program that passes all of GatorGrader's
+  repeatedly try to implement a Python program that passes all of GatorGrader's
   checks by, for instance, creating a program that produces the correct output.
   Students should also repeatedly revise their technical writing to ensure that
   it also passes all of GatorGrader's checks about, for instance, the length of
